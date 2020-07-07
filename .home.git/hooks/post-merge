@@ -1,3 +1,8 @@
 #!/bin/bash
 
-echo "Post merge" $(date +%s) >> $HOME/merge.log
+if [[ -f "$HOME/merge.log" ]]; then
+	echo "Post merge" $(date +%s) >> $HOME/merge.log
+else
+	echo "Post merge log..." > $HOME/merge.log
+	echo "Post merge" $(date +%s) >> $HOME/merge.log
+fi
