@@ -31,16 +31,6 @@ alias ll='ls -l'
 alias l='ls -la'
 alias home="git --work-tree=$HOME --git-dir=$HOME/.home.git"
 
-# Up/Down arrow bindings
-autoload up-line-or-beginning-search
-autoload down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey '\eOA' up-line-or-beginning-search
-bindkey '\e[A' up-line-or-beginning-search
-bindkey '\eOB' down-line-or-beginning-search
-bindkey '\e[B' down-line-or-beginning-search
-
 # Enable vi mode
 source ~/.zsh/vi-mode.zsh
 
@@ -64,3 +54,6 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     man "$@"
 }
+
+# Direnv
+eval "$(direnv hook zsh)"

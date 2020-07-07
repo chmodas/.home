@@ -1,6 +1,16 @@
 # Enable Vim mode
 bindkey -v
 
+# Up/Down arrow bindings
+autoload up-line-or-beginning-search
+autoload down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '\eOA' up-line-or-beginning-search
+bindkey '\e[A' up-line-or-beginning-search
+bindkey '\eOB' down-line-or-beginning-search
+bindkey '\e[B' down-line-or-beginning-search
+
 # Reduce esc delay
 export KEYTIMEOUT=1
 
