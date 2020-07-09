@@ -18,7 +18,7 @@ URxvt.boldFont: xft:Hack-Bold:pixelsize=12:weight=bold
 URxvt.italicFont: xft:Hack-RegularOblique:pixelsize=12:slant=italic
 
 ! Colours
-URxvt.termName: screen-256color
+URxvt.termName: rxvt-unicode-256color
 URxvt.colourUL: yellow
 URxvt.underlineColor: yellow
 
